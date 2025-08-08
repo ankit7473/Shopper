@@ -10,13 +10,14 @@ const getDefaultCart = () => {
 };
 
 const ShopContextProvider = (props) => {
+  const url="https://backend-fr72.onrender.com"
   const [cartItem, setcartItem] = useState(getDefaultCart());
   const [all_product, setAll_product] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('http://localhost:4000/allproducts');
+        const response = await fetch(`${url}/allproducts`);
         if (!response.ok) throw new Error('Network response was not ok');
         const data = await response.json();
         setAll_product(data);
