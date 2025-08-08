@@ -1,0 +1,105 @@
+.item{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 350px;
+    margin: 20px 0px;
+}
+.item p{
+    font-size: 22px;
+}
+.img{
+    width:200px;
+}
+.item-prices{
+    display: flex;
+    gap: 20px;
+}
+.new_price{
+    font-weight: 400;
+}
+.old_price{
+    text-decoration: line-through;
+}
+.item:hover{
+        transform: scale(1.05);
+        transition: 0.6s;
+}
+
+ @media(max-width:1280px){
+    .item{
+    width: 300px;
+}
+.item p{
+    font-size: 16px;
+}
+.img{
+    width:180px;
+}
+.item-prices{
+    gap: 18px;
+}
+ }
+
+
+ @media(max-width:1024px){
+    .item{
+    width: 250px;
+}
+.item p{
+    font-size: 14px;
+}
+.img{
+    width:160px;
+}
+.item-prices{
+    gap: 16px;
+}
+ }
+
+
+ @media(max-width:900px){
+    .item{
+    width: 200px;
+}
+.item p{
+    font-size: 12px;
+}
+.img{
+    width:140px;
+}
+.item-prices{
+    gap: 14px;
+}
+ }
+
+@media (max-width:650px){
+    .item{
+    width: 100px;
+}
+.item p{
+    font-size: 10px;
+}
+.img{
+    width:75px;
+}
+.item-prices{
+    gap: 20px;
+}
+}  
+
+
+@media (max-width:500px){
+    .item{
+    width: 100px;
+}
+.item p{
+    font-size: 8px;
+}
+.img{
+    width:75px;
+}
+.item-prices{
+    gap: 20px;
+}
+}

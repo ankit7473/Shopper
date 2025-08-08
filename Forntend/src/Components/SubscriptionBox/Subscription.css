@@ -1,0 +1,168 @@
+.subscription{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background: linear-gradient(180deg, #fde1ff,#e1ffea22 60%);
+    padding: 100px;
+    margin: 200px 150px 50px 150px;
+    justify-content: center;
+    align-items: center;
+}
+.subscription h1{
+    font-weight: 600;
+    font-size: 50px;
+}
+.subscription p{
+    font-size: 25px;
+    font-weight: 400;
+}
+.input-btn{
+    display: flex;
+    align-items: center;
+    width: 500px;
+    gap: 10px;
+}
+.input-btn input {
+    border: 1px solid gray;
+    padding: 12px 20px;
+    width: 90%;
+    border-radius: 999px;
+}
+.input-btn button{
+    border: none;
+    background: black;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 999px;
+}
+
+
+@media(max-width:1280px){
+    .subscription{
+    gap: 22px;
+    padding: 70px;
+    margin: 180px 130px 30px 130px;
+}
+.subscription h1{
+    font-size: 35px;
+}
+.subscription p{
+    font-size: 18px;
+}
+.input-btn{
+    width: 450px;
+    gap: 8px;
+}
+.input-btn input {
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+}
+.input-btn button{
+    padding: 10px 18px;
+    font-size: 14px;
+}
+}
+
+@media(max-width:1024px){
+    .subscription{
+    gap: 20px;
+    padding: 60px;
+    margin: 160px 110px 20px 110px;
+}
+.subscription h1{
+    font-size: 30px;
+}
+.subscription p{
+    font-size: 16px;
+}
+
+.input-btn{
+    width: 400px;
+    gap: 6px;
+}
+.input-btn input {
+    padding: 8px 16px;
+    font-size: 12px;
+}
+.input-btn button{
+    padding: 8px 16px;
+    font-size: 12px;
+}
+}
+
+@media(max-width:900px){
+    .subscription{
+    gap: 18px;
+    padding: 40px;
+    margin: 140px 90px 15px 90px;
+}
+.subscription h1{
+    font-size: 25px;
+}
+.subscription p{
+    font-size: 14px;
+}
+
+.input-btn{
+    width: 350px;
+    gap: 6px;
+}
+.input-btn input {
+    padding: 6px 14px;
+    font-size: 10px;
+}
+.input-btn button{
+    padding: 6px 14px;
+    font-size: 10px;
+}
+}
+@media(max-width:650px){
+    .subscription{
+    gap: 16px;
+    padding: 30px;
+    margin: 120px 70px 10px 70px;
+}
+.subscription h1{
+    font-size: 18px;
+}
+.subscription{
+    font-size: 12px;
+}
+
+.input-btn{
+    width: 350px;
+    gap: 5px;
+}
+.input-btn input {
+    padding: 6px 14px;
+    font-size: 10px;
+}
+.input-btn button{
+    padding: 6px 14px;
+    font-size: 10px;
+}
+}
+@media(max-width:500px){
+    .subscription{
+    gap: 14px;
+    padding: 25px;
+    margin: 100px 50px 10px 50px;
+}
+.subscription h1{
+    font-size: 14px;
+}
+.subscription p{
+    font-size: 10px;
+}
+.input-btn{
+    width: 250px;
+    gap: 2px;
+}
+.input-btn input {
+    padding: 2px 10px;
+}
+.input-btn button{
+    padding: 2px 10px;
+}
+}

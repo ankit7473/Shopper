@@ -1,0 +1,176 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   margin-top: 150px;
+    gap: 20px;
+}
+.footer_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer_logo p{
+    font-weight: 500;
+    font-size: 28px;
+}
+.footer_text{
+    display: flex;
+    gap: 30px;
+    font-size: 20px;
+    align-items: center;
+}
+.footer_icons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.footer hr{
+    width: 100%;
+    background: #000;
+    height: 1px;
+}
+.footer_last_text{
+    font-size: small;
+}
+
+@media(max-width:1280px){
+    .footer{
+   margin-top: 130px;
+    gap: 18px;
+}
+.footer_logo img{
+    width: 85px;
+}
+.footer_logo p{
+    font-size: 25px;
+}
+.footer_text{
+    gap: 25px;
+    font-size: 18px;
+
+}
+.footer_icons{
+    gap: 25px;
+}
+.footer_icons img{
+    width: 25px;
+}
+}
+
+@media(max-width:1024px){
+    .footer{
+   margin-top: 110px;
+    gap: 16px;
+}
+.footer_logo p{
+    font-size: 22px;
+}
+.footer_logo img{
+    width: 80px;
+}
+.footer_text{
+    gap: 22px;
+    font-size: 16px;
+
+}
+.footer_icons{
+    gap: 22px;
+}
+.footer_icons img{
+    width: 20px;
+}
+}
+@media(max-width:900px){
+    .footer{
+   margin-top: 90px;
+    gap: 14px;
+}
+.footer_logo p{
+    font-size: 20px;
+}
+.footer_logo  img{
+    width: 70px;
+}
+.footer_text{
+    gap: 20px;
+    font-size: 14px;
+
+}
+.footer_icons{
+    gap: 20px;
+}
+.footer_icons img{
+    width: 16px;
+}
+}
+@media(max-width:650px){
+    .footer{
+   margin-top: 70px;
+    gap: 12px;
+}
+.footer_logo p{
+    font-size: 16px;
+}
+.footer_logo  img{
+    width: 65px;
+}
+.footer_text{
+    gap: 18px;
+    font-size: 12px;
+
+}
+.footer_icons{
+    gap: 16px;
+}
+.footer_icons img{
+    width: 14px;
+}
+}
+@media(max-width:650px){
+    .footer{
+   margin-top: 50px;
+    gap: 10px;
+}
+.footer_logo p{
+    font-size: 14px;
+}
+.footer_logo  img{
+    width: 60px;
+}
+.footer_text{
+    gap: 16px;
+    font-size: 10px;
+
+}
+.footer_icons{
+    gap: 14px;
+}
+.footer_icons img{
+    width: 12px;
+}
+}
+@media(max-width:500px){
+    .footer{
+   margin: 50px 0px;
+    gap: 8px;
+}
+.footer_logo p{
+    font-size: 12px;
+}
+.footer_logo  img{
+    width: 40px;
+}
+.footer_text{
+    gap: 14px;
+    font-size: 8px;
+
+}
+.footer_icons{
+    gap: 12px;
+}
+.footer_icons img{
+    width: 10px;
+}
+}

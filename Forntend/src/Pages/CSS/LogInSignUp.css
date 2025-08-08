@@ -1,0 +1,130 @@
+.login-signup{
+    background-color:skyblue;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-signup-container{
+    width: 450px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid black; */
+    background-color: white;
+    padding: 30px 30px;
+    gap: 20px;
+}
+.login-signup-container h2{
+    font-size: 28px;
+    font-weight: 600;
+}
+.login-signup-container input{
+    border: 1px solid gray;
+    padding: 12px 30px;
+}
+.login-signup-container button{
+    width: 100%;
+    padding: 12px 30px;
+    background: red;
+    color: white;
+}
+.loginsignUp_footer_text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: small;
+    font-size: 16px;
+}
+.loginsignUp_footer_text p{
+    font-size: 16px;
+    width: 100%;
+}
+.loginsignUp_footer_text p span{
+    color: red;
+    font-weight: 500;
+    cursor: pointer;
+}
+.input{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+
+@media(max-width:1280px){
+.login-signup-container{
+    width: 380px;
+    height: 450px;
+    padding: 25px 25px;
+    gap: 18px;
+}
+.login-signup-container h2{
+    font-size: 25px;
+}
+.login-signup-container input{
+    font-size: 14px;
+    padding: 10px 25px;
+}
+.login-signup-container button{
+    padding: 10px 25px;
+    font-size: 14px;
+}
+.loginsignUp_footer_text p{
+  font-size: 12px;
+}
+.input{
+    gap: 8px;
+}
+}
+@media(max-width:1024px){
+.login-signup-container{
+    width: 350px;
+    height: 400px;
+    padding: 25px 25px;
+    gap: 18px;
+}
+.login-signup-container h2{
+    font-size: 22px;
+}
+.login-signup-container input{
+    font-size: 12px;
+    padding: 8px 20px;
+}
+.login-signup-container button{
+    padding: 8px 20px;
+    font-size: 12px;
+}
+.loginsignUp_footer_text p{
+  font-size: 10px;
+}
+.input{
+    gap: 6px;
+}
+}
+@media(max-width:500px){
+.login-signup-container{
+    width: 200px;
+    height: 250px;
+    padding: 15px 15px;
+    gap: 10px;
+}
+.login-signup-container h2{
+    font-size: 14px;
+}
+.login-signup-container input{
+    font-size: 8px;
+    padding: 4px 10px;
+}
+.login-signup-container button{
+    padding: 4px 10px;
+    font-size: 8px;
+}
+.loginsignUp_footer_text p{
+  font-size: 8px;
+}
+.input{
+    gap: 4px;
+}
+}

@@ -1,0 +1,257 @@
+.offer{
+    background: linear-gradient(180deg, #fde1ff,#e1ffea22 60%);
+    display: flex;
+    margin: 100px 150px;
+    align-items: center;
+}
+.offer-left{
+    flex:1;
+    line-height: 1;
+    margin: 170px 150px;
+}
+.offer h2{
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.offer-left-content{
+    font-size: 50px;
+    font-weight: 600;
+}
+.offers_subtext{
+       margin: 20px 0px ;
+}
+.offer-left-button button{
+    border: none;
+    color: white;
+    padding: 15px 40px;
+    background-color: red;
+    border-radius: 999px;
+    font-size: 20px;
+    margin-top:30px ;
+}
+.arrow-img{
+    position:absolute;
+    top: 48px;
+    left: 190px;
+}
+
+.offer-right{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offer-right img{
+    width: 80%;
+}
+
+@media(max-width:1280px){
+       .offer{
+    background: linear-gradient(180deg, #fde1ff,#e1ffea22 60%);
+    display: flex;
+    margin: 100px 100px;
+}
+    .offer-left{
+        margin: 40px 50px;
+        gap: 20px;
+    }
+ 
+.offer-left-content{
+    font-size: 40px;
+    font-weight: 600;
+}
+.offers_subtext{
+       margin: 20px 0px ;
+       font-size: 22px;
+}
+.offer-left-button button{
+    border: none;
+    color: white;
+    padding: 20px 50px;
+    background-color: red;
+    border-radius: 999px;
+    margin-top:35px ;
+    font-size:22px;
+}
+
+.offer-right{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offer-right img{
+    width:100%;
+}
+}
+
+
+@media(max-width:1024px){
+       .offer{
+    background: linear-gradient(180deg, #fde1ff,#e1ffea22 60%);
+    display: flex;
+    margin: 70px 70px;
+}
+    .offer-left{
+        margin: 35px 45px;
+        gap: 16px;
+    }
+ 
+.offer-left-content{
+    font-size: 33px;
+    font-weight: 600;
+}
+.offers_subtext{
+       margin: 18px 0px ;
+       font-size: 18px;
+}
+.offer-left-button button{
+    border: none;
+    color: white;
+    padding: 18px 45px;
+    background-color: red;
+    border-radius: 999px;
+    margin-top:25px ;
+    font-size:18px;
+}
+
+.offer-right{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offer-right img{
+    width:100%;
+}
+}
+
+
+@media(max-width:900px){
+       .offer{
+    background: linear-gradient(180deg, #fde1ff,#e1ffea22 60%);
+    display: flex;
+    margin: 50px 50px;
+}
+    .offer-left{
+        margin: 30px 40px;
+        gap: 14px;
+    }
+ 
+.offer-left-content{
+    font-size: 28px;
+    font-weight: 600;
+}
+.offers_subtext{
+       margin: 16px 0px ;
+       font-size: 16px;
+}
+.offer-left-button button{
+    border: none;
+    color: white;
+    padding: 16px 40px;
+    background-color: red;
+    border-radius: 999px;
+    margin-top:20px ;
+    font-size:16px;
+}
+
+.offer-right{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offer-right img{
+    width:100%;
+}
+}
+
+@media(max-width:650px){
+       .offer{
+    background: linear-gradient(180deg, #fde1ff,#e1ffea22 60%);
+    display: flex;
+    margin: 25px 40px;
+}
+    .offer-left{
+        margin: 25px 35px;
+        gap: 12px;
+    }
+ 
+.offer-left-content{
+    font-size: 22px;
+    font-weight: 600;
+}
+.offers_subtext{
+       margin: 12px 0px ;
+       font-size: 12px;
+}
+.offer-left-button button{
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    background-color: red;
+    border-radius: 999px;
+    margin-top:16px ;
+    font-size:12px;
+}
+
+.offer-right{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offer-right img{
+    width:100%;
+}
+}
+@media(max-width:500px){
+       .offer{
+    background: linear-gradient(180deg, #fde1ff,#e1ffea22 60%);
+    display: flex;
+    margin: 25px 30px;
+}
+    .offer-left{
+        margin: 20px 30px;
+        gap: 10px;
+    }
+    .offer h2{
+    font-size: 16px;
+    font-weight: 600;
+}
+.offer-left-content{
+    font-size: 20px;
+    font-weight: 600;
+}
+.offers_subtext{
+       margin: 10px 0px ;
+       font-size: 10px;
+}
+.offer-left-button button{
+    border: none;
+    color: white;
+    padding: 9px 28px;
+    background-color: red;
+    border-radius: 999px;
+    margin-top:14px ;
+    font-size:10px;
+}
+.arrow-img{
+    width: 12px;
+    position:absolute;
+    top: 25px;
+    left: 100px;
+}
+
+.offer-right{
+    flex:1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.offer-right img{
+    width:100%;
+}
+}
