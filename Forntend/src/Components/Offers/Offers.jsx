@@ -2,7 +2,7 @@ import React from 'react'
 import hand_icon from '../Assets/hand_icon.png'
 import arrow_icon from '../Assets/arrow.png'
 import offer_image from '../Assets/exclusive_image.png'
-import './offers.css'
+import './Offers.css'
 const Offers = () => {
   return (
     <div className='offer'>
