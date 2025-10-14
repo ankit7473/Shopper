@@ -10,7 +10,7 @@ const getDefaultCart = () => {
 };
 
 const ShopContextProvider = (props) => {
-  const url="https://backend-fr72.onrender.com"
+  const url="https://shopper-jiwn.vercel.app"
   const [cartItem, setcartItem] = useState(getDefaultCart());
   const [all_product, setAll_product] = useState([]);
 
@@ -22,7 +22,7 @@ const ShopContextProvider = (props) => {
         const data = await response.json();
         setAll_product(data);
         if(localStorage.getItem('auth-token')){
-          fetch('http://localhost:4000/getallcart',{
+          fetch(`${url}/getallcart`,{
             method:'POST',
             headers:{
               Accept:"application/form-data",
@@ -41,7 +41,7 @@ const ShopContextProvider = (props) => {
   const addTocart = (id) => {
     setcartItem((prev) => ({ ...prev, [id]: prev[id] + 1 }));
     if (localStorage.getItem('auth-token')) {
-      fetch('http://localhost:4000/addtocart', {
+      fetch(`${url}/addtocart`, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -62,7 +62,7 @@ const ShopContextProvider = (props) => {
   const removeFromcart = (id) => {
     setcartItem((prev) => ({ ...prev, [id]: prev[id] - 1 }));
     if (localStorage.getItem('auth-token')) {
-      fetch('http://localhost:4000/removefromcart', {
+      fetch(`${url}/removefromcart`, {
         method: 'POST',
         headers: {
           'Accept': 'application/json',
@@ -120,4 +120,3 @@ const ShopContextProvider = (props) => {
 };
 
 export default ShopContextProvider;
-
