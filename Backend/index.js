@@ -14,6 +14,20 @@ const port = process.env.PORT || 4000;
 app.use(express.json());
 app.use(cors());
 
+// With this specific CORS configuration:
+app.use(cors({
+    origin: [
+        'https://shopper-gamma-fawn.vercel.app',
+        'http://localhost:3000',
+        'http://localhost:3001'
+    ],
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'auth-token', 'Accept']
+}));
+
+// Handle preflight requests
+app.options('*', cors());
 // CONNECT TO MONGODB with error handling
 console.log("🔌 Connecting to MongoDB...");
 mongoose.connect("mongodb+srv://ankitkumar62601:kakashi0727@cluster0.fco9cxe.mongodb.net/e-commerce")
