@@ -16,9 +16,10 @@ app.use(cors());
 
 
 //  CONNECT TO MONGODB
-mongoose.connect("mongodb+srv://ankitkumar62601:kakashi0727@cluster0.fco9cxe.mongodb.net/e-commerce");
-
-//  API CREATION
+//  CONNECT TO MONGODB with error handling
+mongoose.connect("mongodb+srv://ankitkumar62601:kakashi0727@cluster0.fco9cxe.mongodb.net/e-commerce")
+.then(() => console.log("MongoDB connected successfully"))
+.catch(err => console.log("MongoDB connection error:", err));//  API CREATION
 
 app.get("/",(req,res)=>{
     res.send("express app is running");
