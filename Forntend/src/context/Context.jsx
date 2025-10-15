@@ -10,7 +10,7 @@ const getDefaultCart = () => {
 };
 
 const ShopContextProvider = (props) => {
- const url="https://shopper-backend-lake.vercel.app"
+ const url="https://shopper-backend-delta.vercel.app/"
   const [cartItem, setcartItem] = useState(getDefaultCart());
   const [all_product, setAll_product] = useState([]);
 
