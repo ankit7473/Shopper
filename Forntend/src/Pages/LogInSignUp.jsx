@@ -15,7 +15,7 @@ const LogInSignUp = () => {
       const login =async () => {
         console.log("login",formdata);
          let responseData;
-        await fetch('https://shopper-backend-lake.vercel.app/login',{  // ← CHANGED
+        await fetch('https://shopper-backend-delta.vercel.app/login',{  // ← CHANGED
           method:'POST',
           headers:{
             Accept:'application/form-data',
