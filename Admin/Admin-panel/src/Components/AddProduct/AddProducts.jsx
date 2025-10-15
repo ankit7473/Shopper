@@ -1,70 +1,89 @@
-// Add these to your existing index.js
+import React from 'react'
+import'./AddProducts.css'
+import upload_area from '../../assets/upload_area.svg'
+import { useState } from 'react'
+const AddProducts = () => {
+    const [image, setimage] = useState(false);
+    const [productDetails, setproductDetails] = useState({
+        name:"",
+        category:"kid",
+        image:"",
+        new_price:"",
+        old_price:""
+    })
 
-const multer = require('multer');
-const path = require('path');
-const fs = require('fs');
-
-// Multer configuration
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        const uploadPath = 'uploads/';
-        if (!fs.existsSync(uploadPath)) {
-            fs.mkdirSync(uploadPath, { recursive: true });
-        }
-        cb(null, uploadPath);
-    },
-    filename: (req, file, cb) => {
-        const uniqueName = `product_${Date.now()}${path.extname(file.originalname)}`;
-        cb(null, uniqueName);
+    const imageHandler=(e) => {
+      setimage(e.target.files[0]);
     }
-});
-
-const upload = multer({ 
-    storage: storage,
-    fileFilter: (req, file, cb) => {
-        if (file.mimetype.startsWith('image/')) {
-            cb(null, true);
-        } else {
-            cb(new Error('Only image files are allowed!'), false);
-        }
+    const  update=(e)=>{
+        setproductDetails({...productDetails,[e.target.name]:e.target.value});
     }
-});
 
-// Serve static files
-app.use('/images', express.static(path.join(__dirname, 'uploads')));
+    const handleAdd= async () => {
+      // console.log(productDetails);
+      let responseData;
+      let product={...productDetails};
+      let formData=new FormData();
+      formData.append('product',image);
+      let resp=await fetch('http://localhost:4000/upload',{
+        method:'POST',
+        headers:{
+          Accept:'application/json',
+        },
+          body:formData
+      } 
+    )
+    responseData =await resp.json();
 
-// Environment configuration
-const isProduction = process.env.NODE_ENV === 'production';
-const backendUrl = isProduction 
-    ? 'https://shopper-backend-delta.vercel.app'
-    : `http://localhost:${port}`;
-
-// Upload endpoint
-app.post('/upload', upload.single('product'), async (req, res) => {
-    try {
-        if (!req.file) {
-            return res.status(400).json({
-                success: false,
-                message: "No file uploaded"
-            });
-        }
-
-        const imageUrl = `${backendUrl}/images/${req.file.filename}`;
-        
-        console.log("📁 File uploaded:", req.file.filename);
-        console.log("🔗 Image URL:", imageUrl);
-
-        res.json({
-            success: true,
-            image_url: imageUrl,
-            filename: req.file.filename
-        });
-    } catch (error) {
-        console.error("❌ Upload error:", error);
-        res.status(500).json({
-            success: false,
-            message: "Upload failed",
-            error: error.message
-        });
+    if(responseData.success){
+      product.image=responseData.image_url;
+      console.log(productDetails);
+      await fetch('http://localhost:4000/addproduct',{
+        method:'POST',
+        headers:{
+          Accept:"application/json",
+          'Content-Type':"application/json"
+        },
+        body:JSON.stringify(product),
+      }).then((resp)=>resp.json()).then((data)=>{
+        {data.success?alert("Product added"):alert("failed")}
+      })
     }
-});
+    }
+    
+  return (
+    <div className='addProducts'>
+      <div className="add_product_title">
+        <p>Product title</p>
+        <input type="text" placeholder='Type here' name="name" value={productDetails.name} onChange={update} />
+      </div>
+      <div className="add_product_prices">
+        <div className="add_product">
+        <p>Old prices</p>
+        <input type="number"  name="old_price" placeholder='Type here' value={productDetails.old_price} onChange={update}/>
+        </div>
+        <div className="add_product">
+        <p>New prices</p>
+        <input type="number" placeholder='Type here' name="new_price" value={productDetails.new_price} onChange={update}/>
+      </div>
+      </div>
+      <div className="add_product_category">
+        <p>Product Category</p>
+        <select name="category" className='category_selector'  value={productDetails.category} onChange={update}>
+            <option value="women">Women</option>
+            <option value="men">Men</option>
+            <option value="kid">kid</option>
+        </select>
+      </div>
+      <div className="add_product_img">
+        <label htmlFor="file_input">
+            <img src={image?URL.createObjectURL(image):upload_area} alt="" />
+        </label>
+        <input onChange={imageHandler} type="file" name='image' id='file_input' hidden />
+      </div>
+      <button className="addproduct_btn" onClick={handleAdd}>ADD</button>
+    </div>
+  )
+}
+
+export default AddProducts
