@@ -5,7 +5,7 @@ const ListProducts = () => {
     let [allproducts, setallproducts] = useState([]);
 
     const fetchProducts= async() => {
-        await fetch("https://shopper-backend-delta.vercel.app//allproducts").then((res)=>res.json())
+        await fetch("https://shopper-backend-delta.vercel.app/allproducts").then((res)=>res.json())
         .then((data)=>{
             setallproducts(data);
         })
@@ -15,7 +15,7 @@ const ListProducts = () => {
     },[]);
     
     const handleDeleteProduct=async(id) => {
-      await fetch("https://shopper-backend-delta.vercel.app//removeproduct",{
+      await fetch("https://shopper-backend-delta.vercel.app/removeproduct",{
         method:'POST',
         headers:{
           Accept:'application/json',
