@@ -25,7 +25,7 @@ const AddProducts = () => {
       let product={...productDetails};
       let formData=new FormData();
       formData.append('product',image);
-      let resp=await fetch('http://localhost:4000/upload',{
+      let resp=await fetch('https://shopper-backend-delta.vercel.app/upload',{
         method:'POST',
         headers:{
           Accept:'application/json',
@@ -38,7 +38,7 @@ const AddProducts = () => {
     if(responseData.success){
       product.image=responseData.image_url;
       console.log(productDetails);
-      await fetch('http://localhost:4000/addproduct',{
+      await fetch('https://shopper-backend-delta.vercel.app/addproduct',{
         method:'POST',
         headers:{
           Accept:"application/json",
