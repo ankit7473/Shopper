@@ -6,7 +6,7 @@ const NewColllections = () => {
   const [collection, setcollection] = useState([]);
 
   useEffect(()=>{
-    fetch('https://shopper-backend-lake.vercel.app/newcollections')  // ← CHANGED
+    fetch('https://shopper-backend-delta.vercel.app/newcollections')  // ← CHANGED
     .then((res)=>res.json())
     .then((data)=>{
       setcollection(data);
