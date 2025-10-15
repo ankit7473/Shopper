@@ -15,7 +15,7 @@ const LogInSignUp = () => {
       const login =async () => {
         console.log("login",formdata);
          let responseData;
-        await fetch('http://localhost:4000/login',{
+        await fetch('https://shopper-backend-lake.vercel.app/login',{  // ← CHANGED
           method:'POST',
           headers:{
             Accept:'application/form-data',
@@ -38,7 +38,7 @@ const LogInSignUp = () => {
       const signup=async() => {
         console.log("signup",formdata)
         let responseData;
-        await fetch('http://localhost:4000/signup',{
+        await fetch('https://shopper-backend-lake.vercel.app/signup',{  // ← CHANGED
           method:'POST',
           headers:{
             Accept:'application/form-data',
