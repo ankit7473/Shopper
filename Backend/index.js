@@ -26,24 +26,17 @@ app.get("/",(req,res)=>{
 
 
 // image storage engine through multer
-const storage=multer.diskStorage({
-    destination:"./upload/images",
-    filename:(req,file,cb)=>{
-        return cb(null,`${file.fieldname}_${Date.now()}${path.extname(file.originalname)}`)    }
-})
+// Temporary fix - disable file upload functionality for Vercel
+const storage=multer.memoryStorage(); // Store in memory instead of disk
 
 const upload=multer({storage:storage});
 
-app.use('/images',express.static('./upload/images'))
-
 app.post('/upload',upload.single('product'),(req,res)=>{
     res.json({
-        success:1,
-      image_url:`https://shopper-jiwn.vercel.app/images/${req.file.filename}`
-
+        success:0, // Disabled
+        message: "File upload disabled on Vercel - use cloud storage like Cloudinary"
     })
 })
-
 
 
 // creating a mongoose schema
