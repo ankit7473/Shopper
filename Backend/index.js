@@ -2,18 +2,7 @@ console.log("🚀 Server starting initialization...");
 
 const express = require("express");
 const jwt = require("jsonwebtoken");
-app.use(cors({
-    origin: [
-        "https://your-frontend-domain.vercel.app", // Replace with your actual frontend URL
-        "http://localhost:3000",
-        "http://127.0.0.1:3000"
-    ],
-    credentials: true,
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization", "auth-token"]
-}));
-const multer = require("multer");
-const path = require("path");
+const cors = require("cors");
 const mongoose = require("mongoose");
 
 const app = express();
@@ -31,17 +20,6 @@ mongoose.connect("mongodb+srv://ankitkumar62601:kakashi0727@cluster0.fco9cxe.mon
 // API CREATION
 app.get("/", (req, res) => {
     res.send("Express app is running");
-});
-
-// Temporary fix - disable file upload functionality for Vercel
-const storage = multer.memoryStorage(); // Store in memory instead of disk
-const upload = multer({ storage: storage });
-
-app.post('/upload', upload.single('product'), (req, res) => {
-    res.json({
-        success: 0, // Disabled
-        message: "File upload disabled on Vercel - use cloud storage like Cloudinary"
-    });
 });
 
 // creating a mongoose schema
