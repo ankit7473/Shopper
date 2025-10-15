@@ -4,7 +4,7 @@ import './itemsCollection.css';
 const ItemsCollection = () => {
   const[dataProduct,setDataProduct]=useState([]);
   useEffect(()=>{
-   fetch('http://localhost:4000/popularinwomen')
+   fetch('https://shopper-backend-lake.vercel.app/popularinwomen')  // ← CHANGED
    .then((res)=>res.json())
    .then((data)=>{
     setDataProduct(data);
